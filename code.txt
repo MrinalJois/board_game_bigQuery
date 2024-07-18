@@ -1,0 +1,32 @@
+# Top 25 oldest board games from the dataset (A.D)
+select Name, Year_Published from `board_games.details`
+where Year_Published is not null and Year_Published>0
+order by Year_Published 
+limit 25;
+
+
+# Top 5 games released every year based on the number of user ratings, along with their avg ratings, min and max players, and play time from 2010 to 2022
+
+select Name, Year_Published, Users_Rated,Rating_Average,Min_Players,Max_Players,Play_Time 
+from( select  Name, Year_Published, Users_Rated,
+dense_rank()over(partition by Year_Published order by Users_Rated desc) as top,
+Rating_Average,Min_Players,Max_Players,Play_Time
+from `board_games.details`)t
+where top<=5 and Year_Published >=2010
+order by Year_Published, Users_Rated desc;
+
+
+#Top 10 most rated games of all time along with their avg rating, min and max players
+select Name, Users_Rated, Year_Published, Rating_Average,Min_Players,Max_Players from(
+select Name, Users_Rated,Year_Published,Rating_Average, Min_Players,Max_Players from `board_games.details`
+group by Users_Rated, Name,Year_Published, Rating_Average,Min_Players,Max_Players)t 
+order by Users_Rated desc
+limit 10;
+
+
+
+# Top 25 Board games with min number of players = 2
+select Name,Users_Rated,Rating_Average,Min_Players,Max_Players,Play_Time from `board_games.details`
+where Min_Players =2
+Order by Users_Rated desc
+limit 25;
