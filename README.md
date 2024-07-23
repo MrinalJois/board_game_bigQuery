@@ -1,5 +1,5 @@
+![image](https://github.com/user-attachments/assets/9b874d3b-6857-408b-8e25-526ff809adc2)
 
-# Board Game Analysis 
 ## A brief look into the features of a few top board games, using SQL and Tableau.
 This projects presents some of the most liked board games along with features like minimum play time, minimum number of players, average rating etc, so that the users can buy their next favourite board game after going through the statistics. Data was taken from [Kaggle](https://www.kaggle.com/datasets/andrewmvd/board-games).
 
