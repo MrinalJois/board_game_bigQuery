@@ -34,7 +34,7 @@ order by Year_Published, Users_Rated desc;
 ```
 
 ### Games with the highest number of user ratings(2010-2022)
-•	A graphical representation using Tableau
+•	A graphical representation 
 
 ![image](https://github.com/user-attachments/assets/2298fd09-99f6-4335-9f9b-43f1a5ad9da5)
 
@@ -64,12 +64,8 @@ where Min_Players =2
 Order by Users_Rated desc
 limit 25;
 ```
-### Top 10 user-rated games
-•	A graphical representation using Tableau
-![image](https://github.com/user-attachments/assets/3486af9a-4112-4681-bec2-450d6b71d1e4)
-
 ### Highest rated games and the minimum age
-•	A graphical representation using Tableau
+•	A graphical representation 
 
 ![image](https://github.com/user-attachments/assets/de97de25-e8c3-4e94-983f-f26c3fda4b88)
 ![image](https://github.com/user-attachments/assets/ed8297eb-7179-4314-b3ac-108b286c06c6)
